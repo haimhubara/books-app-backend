@@ -9,6 +9,7 @@ Base.metadata.create_all(bind=engine)
 
 origins = [
     "http://localhost:3000", 
+    "https://haimhubara-books-web.netlify.app"
 ]
 
 app.add_middleware(

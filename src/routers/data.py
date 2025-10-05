@@ -3,10 +3,10 @@ from typing import List, Annotated
 from fastapi import APIRouter, Depends, HTTPException, status,Path
 from sqlalchemy.orm import Session, joinedload
 from pydantic import BaseModel
-from routers.auth import get_current_user
+from src.routers.auth import get_current_user
 
-from database import SessionLocal
-from models import Users, Orders, OrderItems, Products
+from src.database import SessionLocal
+from src.models import Users, Orders, OrderItems, Products
 
 router = APIRouter(tags=["Orders"])
 

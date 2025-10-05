@@ -1,5 +1,5 @@
-from models import Base, Users
-from database import  engine
+from src.models import Base, Users
+from src.database import  engine
 from passlib.context import CryptContext
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker

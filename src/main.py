@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from routers import  data, auth, products
+from src.routers import  data, auth, products
 from fastapi.middleware.cors import CORSMiddleware
-from database import Base,engine
+from src.database import Base,engine
 
 app = FastAPI()
 

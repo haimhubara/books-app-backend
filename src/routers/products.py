@@ -7,7 +7,7 @@ router = APIRouter(
 
 def load_products_file():
     try:
-        with open('data/db.json', 'r', encoding='utf-8') as f:
+        with open('src/data/db.json', 'r', encoding='utf-8') as f:
             return json.load(f)
     except FileNotFoundError:
         raise HTTPException(status_code=500, detail="Products file not found")

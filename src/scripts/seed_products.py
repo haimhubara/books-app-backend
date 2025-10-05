@@ -1,9 +1,13 @@
 import json
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from models import Base, Products  
+from src.models import Base, Products  
 import os
 from dotenv import load_dotenv
+
+import os
+script_dir = os.path.dirname(__file__) 
+json_path = os.path.join(script_dir, "..", "data", "db.json")
 
 load_dotenv()
 
@@ -15,7 +19,7 @@ session = Session()
 Base.metadata.create_all(engine)
 
 
-with open("data/db.json", "r", encoding="utf-8") as f:
+with open(json_path, "r", encoding="utf-8") as f:
     data = json.load(f)
 
 products_list = data["products"]  

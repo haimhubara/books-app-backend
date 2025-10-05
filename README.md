@@ -50,10 +50,14 @@ books-app-backend/
 ## ⚙️ Environment Variables
 
 Create a .env file:
+
+```env
 DATABASE_URL=postgresql://username:password@localhost/dbname
 SECRET_KEY=your_jwt_secret
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=60
+```
+
 
 ## 🔧 How To Run Locally
 
